@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        var a = [20, 5, 6, 10];
+        var t = a.toString();
+        var s = a.join("_");
+
+        // in ra ở console
+        console.log(t);
+        // in ra màn hình
+        var tp = document.getElementsByTagName("p");
+        tp[0].innerText = t;
+        tp[1].innerText = s;
+        // thêm phần tử mảng
+        a.push(10, 11, 12, 13);
+        console.log(a);
+        //bớt phần tử
+        a.pop();
+        console.log(a);
+        // bớt phần tử cách 2 (dùng để hiện thị giá trị bị xóa mất)
+        var b = a.pop();
+        console.log(a);
+        console.log(b);
+        // thêm phần tử vào đầu mảng
+        a.unshift(100);
+        console.log(a);
+        //xóa phần tử đầu mảng và hiển thị giá trị bị xóa
+        var c = a.shift();
+        console.log(c);
+        console.log(a);
+        // trích xuất mảng
+        console.log(a.slice(2, 5));
+        // hàm lọc filter
+        var d = a.filter(function(value, index) {
+            return value % 5 == 0;
+        });
+        console.log(d);
+        // đảo thứ tự các phần tử trong mảng
+        var e = a.reverse();
+        console.log(e);
+        //
+    </script>
+</body>
+
+</html>

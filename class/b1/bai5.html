@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="input">
+        id
+        <input type="Number" id="id" size="30">
+        tên
+        <input type="text" id="name">
+        giới tính
+        <select name="gt" id="gt">
+            <option value="nam">nam</option>
+            <option value="nữ">nữ</option>
+        </select>
+        <button onclick="save()">Thêm</button>
+    </div>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>tên</th>
+            <th>giới tính</th>
+        </tr>
+        <tbody id="datalist"></tbody>
+    </table>
+    <script>
+        function save(button) {
+            var name = document.getElementById('name');
+            var id = document.getElementById("id");
+            var gt = document.getElementById("gt");
+            var datatag = document.getElementById("datalist");
+            datatag.innerHTML += "<tr>" +
+                "<td>" + id.value + "</td>" +
+                "<td>" + name.value + "</td>" +
+                "<td>" + gt.value + "</td>" +
+                "</tr>";
+        }
+    </script>
+</body>
+
+</html>

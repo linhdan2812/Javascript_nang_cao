@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    string <input type="text"> <button onclick="count()">count</button>
+    <p></p>
+    <script>
+        function count(button) {
+            var inp = document.querySelector("input");
+            var tp = document.querySelector("p");
+            if (inp.value == "") {
+                tp.style.color = 'red';
+                tp.innerHTML = "bạn chưa nhập chuỗi";
+            } else {
+                tp.style.color = 'black';
+                tp.innerHTML = "Độ dài chuỗi là : " + (inp.value).length;
+            }
+        }
+    </script>
+</body>
+
+</html>

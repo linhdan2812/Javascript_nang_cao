@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="moment.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>bài này bao gồm bài 5 và 6</h1>
+    date: <input type="text" id="day">
+    month: <input type="text" id="month">
+    year: <input type="text" id="year">
+    <button onclick="convert()">convert</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        function convert(button) {
+            var day = document.getElementById("day").value;
+            var month = document.getElementById("month").value;
+            var year = document.getElementById("year").value;
+            var date0 = document.getElementsByTagName("p")[0];
+            var date1 = document.getElementsByTagName("p")[1];
+            var date2 = document.getElementsByTagName("p")[2];
+            var date3 = document.getElementsByTagName("p")[3];
+            var date4 = document.getElementsByTagName("p")[4];
+            var date5 = document.getElementsByTagName("p")[5];
+            var setMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var setMonths = ["Jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+            var d = new Date();
+            d.setDate(day);
+            d.setMonth(month);
+            d.setFullYear(year);
+            date0.innerHTML = [d.getFullYear(), d.getMonth(), d.getDate()].join("-");
+            date1.innerHTML = [d.getDate(), d.getMonth(), d.getFullYear()].join("/");
+            date2.innerHTML = [d.getDate(), d.getMonth(), d.getFullYear()].join(".");
+            date3.innerHTML = d.getDate() + " " + setMonths[d.getMonth() - 1] + "," + d.getFullYear();
+            date4.innerHTML = d.getDate() + " " + setMonth[d.getMonth() - 1] + "," + d.getFullYear();
+            // kiểm tra thứ
+            var dayOfWeek = moment(
+                d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear, "DD/MM/YYYY"
+            );
+            date5.innerHTML = dayOfWeek.format("dddd");
+
+        }
+    </script>
+</body>
+
+</html>

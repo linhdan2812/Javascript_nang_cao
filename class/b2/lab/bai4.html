@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Email <input type="text"> <button onclick="check()">check</button>
+    <p></p>
+    <script>
+        function check(button) {
+            var mail = document.querySelector("input");
+            var tp = document.querySelector("p");
+            var filterEmail = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/i;
+            if (mail.value == "") {
+                tp.style.color = 'red';
+                tp.innerHTML = "bạn chưa nhập email";
+            } else if (!filterEmail.test(mail.value)) {
+                tp.style.color = 'black';
+                tp.innerHTML = "FALSE";
+            } else {
+                tp.style.color = 'black';
+                tp.innerHTML = "TRUE";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lodash.js"></script>
+    <style>
+        .user_item {
+            color: green;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="target">
+
+    </ul>
+    <script>
+        var target = document.querySelector("#target");
+        var users = [{
+            id: 1,
+            name: "Linh Đan",
+            gender: 2
+        }, {
+            id: 2,
+            name: "Đậu Linh",
+            gender: 2
+        }, {
+            id: 300,
+            name: "Đậu Đan",
+            gender: 2
+        },
+        {
+            id: 101,
+            name: "con chó",
+            gender: 1
+        },
+        {
+            id: 20,
+            name: "con dịt",
+            gender: 1
+        }
+        ];
+        // var name = users.map(function (user, index, users) {
+        //     return user.name;
+        // });
+        // document.write(name);
+        // uclass = _.filter(users, function (o) {
+        //     return o.class == "ud";
+        // });
+        // console.log(uclass);
+        // uname = _.findIndex(users, function (o) {
+        //     return o.name == "con dịt";
+        // });
+        // console.log(uname);
+        // remove = _.remove(users, function (n) {
+        //     return n.class == "ud";
+        // });
+        // console.log(users);
+        // ========================================================================
+        // dùng dấu nháy là template string trong es6
+        //${} dùng để truyền biên trong template string
+        users.map((user) => {
+            var li = document.createElement("li");
+            li.innerHTML += user.id + "||" + user.name + "||" + (user.gender == 1 ? "male" : "famle");
+            target.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

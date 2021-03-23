@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button onclick="check()">check</button>
+    <h3></h3>
+    <script>
+        function check(button) {
+            var h3 = document.querySelector("h3");
+            var input = document.getElementById("txt");
+            var arr = input.value.split("");
+            var arr2 = arr.reverse();
+            console.log(arr2);
+            var text = arr2.join("");
+            if (text == input.value) {
+                h3.innerHTML = "true";
+            } else {
+                h3.innerHTML = "false";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

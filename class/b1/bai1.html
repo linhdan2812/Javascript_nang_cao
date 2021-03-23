@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css" media="screen">
+    #target {
+        width: 60px;
+        height: 60px;
+        background: red;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+    <div id="target">
+
+    </div>
+
+
+    <script>
+        var target = document.querySelector("#target");
+        // cách 1
+        // target.onmouseover = function () {
+        //     target.style.background = "pink";
+        // }
+        // target.onmouseout = function () {
+        //     target.style.background = "black";
+        // }
+        // cách 2
+        function pink() {
+            target.style.background = "pink";
+        }
+        function red() {
+            target.style.background = "red";
+        }
+        target.setAttribute("onmouseover", "pink()");
+        target.setAttribute("onmouseout", "red()");
+    </script>
+</body>
+
+</html>

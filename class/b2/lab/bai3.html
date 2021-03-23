@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    string <input type="text"> <button onclick="convert()">covert</button>
+    <p></p>
+    <script>
+        function convert(button) {
+            var inp = document.querySelector("input").value;
+            var tp = document.querySelector("p");
+            if (inp == "") {
+                tp.style.color = 'red';
+                tp.innerHTML = "bạn chưa nhập chuỗi";
+            } else {
+                var str = inp.replace(/[^a-z0-9\s]/gi, '');
+                var str1 = str.split(' ').map(str => str.charAt(0).toUpperCase() + str.substring(1)).join('');
+                var result = str1.charAt(0).toLowerCase() + str1.substring(1);
+                tp.style.color = 'black';
+                tp.innerHTML = result;
+            }
+        }
+    </script>
+</body>
+
+</html>

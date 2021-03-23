@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lodash.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // var i = " ";
+        var arr = [1, 2, 3, 4, 5];
+        var arr2 = _.chunk(arr, 2);
+        arr2.forEach(function (currentValue, index, arr) {
+            document.write(currentValue);
+        })
+        // console.log(arr2);
+    </script>
+</body>
+
+</html>

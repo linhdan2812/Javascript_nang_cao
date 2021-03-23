@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    string <input type="text" id="text">
+    number <input type="number" id="num">
+    <button onclick="count()">convert</button>
+    <p></p>
+    <script>
+        function count(button) {
+            var inp = document.querySelector("#text");
+            var num = document.querySelector("#num");
+            var tp = document.querySelector("p");
+            if (inp.value == "" || num.value == "") {
+                tp.style.color = 'red';
+                tp.innerHTML = "bạn chưa nhập chuỗi hoặc số hoặc có thể là cả hai :))";
+            }
+            else if ((inp.value).length > num.value) {
+                tp.style.color = 'black';
+                tp.innerHTML = (inp.value).substr(0, num.value) + "...";
+            } else {
+                tp.style.color = 'black';
+                tp.innerHTML = inp.value + ".";
+            }
+        }
+    </script>
+</body>
+
+</html>
