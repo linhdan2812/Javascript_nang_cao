@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="phone" onblur="check()">
+    <p></p>
+    <script>
+        function check() {
+            var inp = document.querySelector("#phone");
+            var tp = document.querySelector("p");
+            var inpc = /((09|03)+([0-9]{8})\b)/g;
+            if (inpc.test(inp.value)) {
+                tp.innerHTML = "chuẩn";
+            } else {
+                tp.innerHTML = "sai";
+            }
+        }
+    </script>
+</body>
+
+</html>
