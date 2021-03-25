@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Bean = {
+            id: 1,
+            name: "Bean Knit",
+            age: 20,
+            isMarried: false,
+            husbands: [
+                {
+                    name: "Yi Long",
+                    age: 38
+                },
+                {
+                    name: "yi Yong",
+                    age: 40
+                }
+            ],
+            buyHouse: function () {
+                console.log("not yet");
+            }
+        }
+        var newHusband = {
+            name: "Goong Tun",
+            age: 30
+        }
+        Bean.husbands.push(newHusband);
+        console.log(Bean.husbands);
+    </script>
+</body>
+
+</html>
