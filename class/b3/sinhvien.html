@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var sinhVien = {
+            ma_sinh_vien: "ph12266",
+            ho_va_ten: "A",
+            lop: "PT15314",
+            ngay_nhap_hoc: new Date(2020, 1, 1),
+            diem_trung_binh: 9,
+            hocLuc: function () {
+                if (sinhVien.diem_trung_binh < 5) {
+                    document.write("yếu");
+                } else if (sinhVien.diem_trung_binh < 7) {
+                    document.write("trung bình");
+                } else if (sinhVien.diem_trung_binh < 8) {
+                    document.write("khá");
+                } else {
+                    document.write("giỏi");
+                }
+            },
+            tgian: function () {
+                var today = new Date();
+                var date = today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+                document.write("<br/>thời gian hiện tại là " + date);
+            }
+        }
+        sinhVien.hocLuc();
+        sinhVien.tgian();
+        document.write(sinhVien.ngay_nhap_hoc);
+    </script>
+</body>
+
+</html>
