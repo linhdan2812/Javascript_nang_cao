@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <script>
+        var p = document.querySelector("p");
+        function VanDongVien(ma_van_dong_vien, ho_va_ten, ngay_sinh, giai_thuong) {
+
+            this.ma_van_dong_vien = ma_van_dong_vien;
+            this.ho_va_ten = ho_va_ten;
+            this.ngay_sinh = new Date(ngay_sinh);
+            this.giai_thuong = giai_thuong;
+
+            this.kiemTraDieuKien = function (ngay_to_chuc, so_tuoi_du_dieu_kien) {
+                var objNamToChuc = new Date(ngay_to_chuc).getFullYear();
+                var objNamSinh = this.ngay_sinh.getFullYear();
+                var tuoi = objNamToChuc - objNamSinh;
+                if (14 <= tuoi <= so_tuoi_du_dieu_kien) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            this.addgiai_thuong = function (giai_thuong) {
+                this.giai_thuong.push(giai_thuong);
+            }
+            this.showgt = function () {
+                this.giai_thuong.map((giai_thuong) => {
+                    p.innerHTML += "<li>" + giai_thuong + "</li>";
+                })
+            }
+        }
+
+        var nam = new VanDongVien('006', 'Nguyen Van A', '2001-03-13', ['hcv', 'hcb']);
+        nam.addgiai_thuong('hcđ');
+        nam.showgt();
+    </script>
+</body>
+
+</html>
