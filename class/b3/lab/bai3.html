@@ -14,12 +14,32 @@
             this.name = name;
             this.age = age;
             this.address = address;
-            this.birthday = birthday;
+            this.birthday = new Date(birthday);
             this.subjects = subjects;
         }
         function studentPoly(name, age, address, birthday, subjects) {
             student.call(this, name, age, address, birthday, subjects);
+            this.AvgScore = function () {
+                var sum = 0;
+                this.subjects.map(point => {
+                    sum = sum + point.point;
+                });
+                document.write("điểm trung bình là: " + sum / this.subjects.length);
+            },
+                this.changeAddress = function (addressNew) {
+                    student.address = addressNew;
+                    document.write("<br/> địa chỉ mới là: " + addressNew);
+                }
         }
+        var st = new studentPoly('Đan', 20, 'Nghệ An', '01/01/2001', [
+            { name: 'html', teacher: 'tiennt21', point: 5.3, year: 2020 },
+            { name: 'php1', teacher: 'ngocbn', point: 9.3, year: 2020 }
+        ]);
+        console.log("thông tin")
+        console.log(st);
+        document.write("điểm trung bình là:")
+        st.AvgScore();
+        st.changeAddress("Diễn Châu");
     </script>
 </body>
 
