@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function line1() {
+            setTimeout(function () {
+                document.write("line1");
+            }, 2000)
+        }
+        function line2() {
+            document.write("line2");
+        }
+        line1();
+        line2();
+        // xử lý bất đồng bộ
+        function batDau(callBack) {
+            setTimeout(function () {
+                document.write("bắt đầu");
+                callBack("khủng long");
+            }, 5000);
+        }
+        function ketThuc(game) {
+            document.write("kết thúc" + game);
+        }
+        batDau(ketThuc);
+    </script>
+</body>
+
+</html>
