@@ -1,0 +1,3 @@
+chạy server với json
+cd vào thư mục chưa json
+json-server --watch tên file json
