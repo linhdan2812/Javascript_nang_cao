@@ -40,10 +40,44 @@
                             </div>
                             <div class="form-group">
                                 <label>Đơn giá</label>
-                                <input type="email" class="form-control" name="price"
+                                <input type="number" class="form-control" name="price"
                                     placeholder="Nhập vào giá sản phẩm">
                             </div>
-                            <button type="submit" class="btn btn-primary">Lưu sản phẩm</button>
+                            <button type="submit" class="btn btn-primary" id="submit">Lưu sản phẩm</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- edit Modal -->
+        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">edit sản phẩm</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-edit">
+                            <div class="form-group">
+                                <label>Mã sản phẩm</label>
+                                <input type="text" class="form-control" name="id" placeholder="Nhập vào ID">
+                            </div>
+                            <div class="form-group">
+                                <label>Tên sản phẩm</label>
+                                <input type="text" class="form-control" name="name" placeholder="Nhập vào tên sản phẩm">
+                            </div>
+                            <div class="form-group">
+                                <label>Đơn giá</label>
+                                <input type="number" class="form-control" name="price"
+                                    placeholder="Nhập vào giá sản phẩm">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submit">Lưu sản phẩm</button>
                         </form>
                     </div>
 
