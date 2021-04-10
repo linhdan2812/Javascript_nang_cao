@@ -11,10 +11,33 @@
 
 <body>
     <div class="container">
-        <h2>DANH SÁCH SẢN PHẨM</h2>
+        <h2>DANH SÁCH DANH MỤC</h2>
         <!-- Button trigger modal -->
+        <a href="index.html">
+            <button type="button" class="btn btn-success">
+                Dashboard
+            </button>
+        </a>
+        <a href="cate.html">
+            <button type="button" class="btn btn-success">
+                Thể loại
+            </button>
+        </a>
+        <a href="product.html">
+            <button type="button" class="btn btn-success">
+                Truyện
+            </button>
+        </a>
+        <a href="customer.html">
+            <button type="button" class="btn btn-success">
+                Khách hàng
+            </button>
+        </a>
+        <button type="button" class="btn btn-success">
+            Order
+        </button>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-            Thêm sản phẩm
+            Thêm danh mục
         </button>
         <p></p>
         <!-- Modal -->
@@ -38,32 +61,26 @@
                                 <label>Tên sản phẩm</label>
                                 <input type="text" class="form-control" name="name" placeholder="Nhập vào tên sản phẩm">
                             </div>
-                            <div class="form-group">
-                                <label>Đơn giá</label>
-                                <input type="number" class="form-control" name="price"
-                                    placeholder="Nhập vào giá sản phẩm">
-                            </div>
-                            <button type="submit" class="btn btn-primary" id="submit">Lưu sản phẩm</button>
+                            <button type="submit" class="btn btn-primary">Lưu</button>
                         </form>
                     </div>
 
                 </div>
             </div>
         </div>
-
-        <!-- edit Modal -->
-        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
+        <!-- end -->
+        <div class="editModalForm modal fade " id="exampleModalCenter" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">edit sản phẩm</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Cập Nhật Danh Mục</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="form-edit">
+                        <form class="form-product">
                             <div class="form-group">
                                 <label>Mã sản phẩm</label>
                                 <input type="text" class="form-control" name="id" placeholder="Nhập vào ID">
@@ -72,29 +89,23 @@
                                 <label>Tên sản phẩm</label>
                                 <input type="text" class="form-control" name="name" placeholder="Nhập vào tên sản phẩm">
                             </div>
-                            <div class="form-group">
-                                <label>Đơn giá</label>
-                                <input type="number" class="form-control" name="price"
-                                    placeholder="Nhập vào giá sản phẩm">
-                            </div>
-                            <button type="submit" class="btn btn-primary" id="submit">Lưu sản phẩm</button>
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
                         </form>
                     </div>
 
                 </div>
             </div>
         </div>
+        <!-- end -->
         <table id="tableProducts" class="table table-bordered">
             <tr>
-                <th>Mã sản phẩm</th>
-                <th>Tên sản phẩm</th>
-                <th>Đơn giá</th>
+                <th>Mã danh mục</th>
+                <th>Tên danh mục</th>
                 <th>Chức năng</th>
             </tr>
-
         </table>
     </div>
-    <script src="js.js"></script>
+    <script src="../js/cate.js"></script>
 </body>
 
 </html>
