@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ThucDay() {
+            console.log("b1.Đã Ngủ Dậy");
+            DanhRang();
+        }
+        function DanhRang() {
+            console.log("b2.Đang Đánh Răng");
+            setTimeout(function () {
+                console.log("đã Đánh răng xong! ");
+                ThayQuanAo();
+            }, 2000);
+        }
+
+        function ThayQuanAo() {
+            console.log("b3.Đang thay quần áo   ");
+            setTimeout(function () {
+                console.log("đã  thay xong! ");
+                diHoc();
+            }, 3000);
+        }
+        function diHoc() {
+            console.log("b4.Đang  đến Trưòng   ");
+                        setTimeout(function () {
+                            console.log("đã đến trường ");
+                          
+                        }, 4000);
+        }
+     ThucDay();
+    </script>
+</body>
+
+</html>

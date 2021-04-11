@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name, namesub, lab1, lab2, lab3, final;
+        function nhapTen() {
+            return new Promise(function (resolve) {
+                name = prompt("Nhập Tên Sinh Viên");
+                // alert("tên là" + name)
+                resolve();
+            });
+        }
+        function nhapMon() {
+            return new Promise(function (resolve) {
+                namesub = prompt("Nhập Tên môn học");
+                // alert("môn học" + namesub)
+                resolve();
+            });
+        }
+        function nhapDiemLab1() {
+            return new Promise(function (resolve) {
+                lab1 = prompt("Nhập điểm lab 1");
+                resolve();
+            });
+        }
+        function nhapDiemLab2() {
+            return new Promise(function (resolve) {
+                setTimeout(function () {
+                    lab2 = prompt("Nhập điểm lab 2");
+                    resolve();
+                }, 1000);
+            });
+        }
+        function nhapDiemLab3() {
+            return new Promise(function (resolve) {
+                setTimeout(function () {
+                    lab3 = prompt("Nhập điểm lab 3");
+                    resolve();
+                }, 1000);
+            });
+        }
+        function nhapDiemFinal() {
+            return new Promise(function (resolve) {
+                setTimeout(function () {
+                    final = prompt("Nhập điểm final");
+                    resolve();
+                }, 1000);
+            });
+        }
+        function diemTrungBinh() {
+            var tb =
+                Number(lab1) * 0.1 +
+                Number(lab2) * 0.2 +
+                Number(lab3) * 0.3 +
+                Number(final) * 0.4;
+            if (tb < 5) {
+                alert("tên " + name + " điểm trung bình môn " + namesub + " là " + tb + " học lực yếu");
+            } else if (tb <= 7) {
+                alert("tên " + name + " điểm trung bình môn " + namesub + " là " + tb + " trung binh");
+            } else if (tb <= 8.5) {
+                alert("tên " + name + " điểm trung bình môn " + namesub + " là " + tb + " khá");
+            } else {
+                alert("tên " + name + " điểm trung bình môn " + namesub + " là " + tb + " giỏi");
+            }
+        }
+        nhapTen()
+            .then(nhapMon)
+            .then(nhapDiemLab1)
+            .then(nhapDiemLab2)
+            .then(nhapDiemLab3)
+            .then(nhapDiemFinal)
+            .then(diemTrungBinh);
+    </script>
+</body>
+
+</html>
