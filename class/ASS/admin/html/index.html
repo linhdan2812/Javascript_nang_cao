@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 
 
-    <title>Hello, world!</title>
+    <title>Dashboard</title>
 </head>
 
 <body>
@@ -64,8 +64,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="customer.html" class="nav-link text-light p-3 mb-2 "> <i class="fa fa-users text-light fa-lg mr-3"
-                            aria-hidden="true"></i>
+                    <a href="customer.html" class="nav-link text-light p-3 mb-2 "> <i
+                            class="fa fa-users text-light fa-lg mr-3" aria-hidden="true"></i>
                         Customer
                     </a>
                 </li>
@@ -116,7 +116,8 @@
                         </a>
                         <div class="circle-tile-content purple">
                             <div class="circle-tile-description text-faded"> Customer </div>
-                            <a class="circle-tile-footer" href="customer.html">View <i class="fa fa-chevron-circle-right"></i></a>
+                            <a class="circle-tile-footer" href="customer.html">View <i
+                                    class="fa fa-chevron-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -134,7 +135,45 @@
                     </div>
                 </div>
             </div>
-
+            <h1>THỐNG KÊ DỮ LIỆU</h1>
+            <div class="row col-md-6 col-md-offset-2 custyle">
+                <table class="table table-striped custab">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên</th>
+                            <th>Số lượng</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>1</td>
+                        <td>Categories</td>
+                        <td class="countcate"></td>
+                        <td class="text-center"><a class='btn btn-info btn-xs' href="cate.html"><span
+                                    class="glyphicon glyphicon-edit"></span>chi tiết</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Products</td>
+                        <td class="countProd"></td>
+                        <td class="text-center"><a class='btn btn-info btn-xs' href="product.html"><span
+                                    class="glyphicon glyphicon-edit"></span> chi tiết</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Customer</td>
+                        <td class="countCust"></td>
+                        <td class="text-center"><a class='btn btn-info btn-xs' href="customer.html"><span
+                                    class="glyphicon glyphicon-edit"></span>chi tiết</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- <div class="countcate">
+            </div> -->
         </div>
         <!-- end nav -->
 
