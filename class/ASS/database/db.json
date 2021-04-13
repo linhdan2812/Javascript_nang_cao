@@ -1,62 +1,66 @@
 {
   "cate": [
     {
-      "id": "cate01",
+      "id": 1,
       "name": "Ngôn tình"
     },
     {
-      "id": "cate02",
+      "id": 2,
       "name": "Đam mỹ"
     },
     {
-      "id": "cate03",
+      "id": 3,
       "name": "Bách Hợp"
     },
     {
-      "id": "cate04",
-      "name": "Cổ đại"
-    },
-    {
-      "id": "cate05",
-      "name": "hiện đại"
-    },
-    {
-      "id": "cate06",
+      "id": 4,
       "name": "trinh thám"
+    },
+    {
+      "id": 5,
+      "name": "nữ cường"
     }
   ],
   "products": [
     {
-      "id": "c01",
+      "id": 1,
       "proName": "Chọc tức vợ yêu",
       "image": "https://truyen5s.net/images/2018/11/choc-tuc-vo-yeu-mua-mot-tang-mot.jpeg?v=1611707761",
-      "price": "23",
+      "price": "34000",
       "detail": "Ninh Tịch, Lục ĐÌnh Kiêu, Lục Kình Vũ, Lục Cảnh Lễ, Giang Mục Dã....",
-      "cateId": "Ngôn tình"
+      "cateId": 2
     },
     {
-      "id": "C02",
-      "proName": "boss là nữ phụ ",
-      "image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/0/16326.jpg?v=2&w=340&h=497",
+      "id": 2,
+      "proName": "Chọc tức vợ yêu",
+      "image": "https://truyen5s.net/images/2018/11/choc-tuc-vo-yeu-mua-mot-tang-mot.jpeg?v=1611707761",
       "price": "34000",
       "detail": "Việc của Thời Sênh - một bà mẹ kế chuyên đứng về phía nhân vật phụ và bức tử nhân vật chính - chính là tiến vào những thế giới tiểu thuyết khác nhau, hoàn thành nguyện vọng cũng như giải trừ oan khuất cho các nhân vật phụ.  Cô xuyên qua vô số thời không, thay đổi số mệnh của vô số người, chứng minh một điều rằng chính nghĩa luôn thắng âm mưu quỷ kế.",
-      "cateId": "Cổ đại"
+      "cateId": 2
     },
     {
-      "id": "C03",
+      "id": 3,
+      "proName": "boss là nữ phụ ",
+      "image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/0/16326.jpg?v=2&w=340&h=497",
+      "price": "10000",
+      "detail": "Việc của Thời Sênh - một bà mẹ kế chuyên đứng về phía nhân vật phụ và bức tử nhân vật chính - chính là tiến vào những thế giới tiểu thuyết khác nhau, hoàn thành nguyện vọng cũng như giải trừ oan khuất cho các nhân vật phụ.  Cô xuyên qua vô số thời không, thay đổi số mệnh của vô số người, chứng minh một điều rằng chính nghĩa luôn thắng âm mưu quỷ kế.",
+      "cateId": 5
+    },
+    {
+      "id": 4,
       "proName": "Ma Đạo Tổ Sư",
-      "image": "https://static.8cache.com/cover/eJzLyTDWr3Lxzff38g1JdU_3rbQwjtT1d41yjDLIdXVyD_N0THZKDSkKTQkIrwiODCs2SE2MMM5wMXNMLCnIdU8vT_ItSS4sTk_2LSgrzQq38HA19S0sKrSwLTcyNNXNMDYyAgAjVyAJ/ma-dao-to-su.jpg",
-      "price": "430000",
+      "image": "http://cdn5.truyentranh8.net/covers/2019/0116/24461-ma-dao-to-su-mao-doan-tieu-kiem-kiem.jpg",
+      "price": "10000",
       "detail": "Đời trước, thanh danh của Ngụy Vô Tiện vô cùng thối nát, bị người đời phỉ báng.  Bị người thân nhất - sư đệ của chính mình dẫn người đến giết chết.  Tung hoành một đời không ngờ Ngụy Vô Tiện lại chết không toàn thây.  Không ngờ kẻ từng là ma đạo tổ sư, khiến cho giang hồ dậy sóng, lúc chết đi sống lại, lại biến thành một kẻ...não tàn....",
-      "cateId": "Đam mỹ"
+      "cateId": 2
     },
     {
-      "id": "C04",
+      "id": 5,
       "proName": "Trấn Hồn",
-      "image": "https://avatar-ex-swe.nixcdn.com/playlist/2018/07/03/8/f/5/7/1530609478911_500.jpg",
-      "price": "100000000000000000",
-      "detail": " kể về hành trình truy tìm tứ thánh khí Triệu Vân Lan và Thẩm Ngụy qua nhiều kiếp để miêu tả lại ván cờ giữa nhân gian, quỷ giới, tiên đồ.",
-      "cateId": "trinh thám"
+      "image": "https://i.pinimg.com/originals/ab/da/eb/abdaeb2bc32c6039504d9488a4cf9a2e.jpg",
+      "price": "10000",
+      "detail": "trấn hồn",
+      "cateId": 4
     }
   ],
   "customer": [

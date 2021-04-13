@@ -2,7 +2,8 @@ var urlProducts = 'http://localhost:3000/products';
 var urlCate = ' http://localhost:3000/cate';
 var editModal = document.querySelector('.editModalForm .form-product');
 var editID = '';
-fetch(urlProducts).then(res => res.json())
+fetch(urlProducts)
+    .then(res => res.json())
     .then(data => {
         data.forEach(product => {
             renderProducts(product);
@@ -13,7 +14,7 @@ fetch(urlCate)
     .then(catedata => {
         var content = ``;
         catedata.forEach(cate => {
-            content += `<option value="${cate.name}">${cate.name}</option>`;
+            content += `<option value="${cate.id}">${cate.name}</option>`;
         });
         document.querySelector('#cateid').innerHTML = content;
         document.querySelector('#editcateid').innerHTML = content;
@@ -84,7 +85,7 @@ editModal.addEventListener('submit', e => {
             image: editModal.image.value,
             price: editModal.price.value,
             detail: editModal.detail.value,
-            cateId: editModal.editcateid.value
+            cateId: Number(editModal.editcateid.value)
         })
     })
         .then(res => res.json())
@@ -106,7 +107,7 @@ add.addEventListener('submit', e => {
             image: add.image.value,
             price: add.price.value,
             detail: add.detail.value,
-            cateId: add.cateid.value
+            cateId: Number(add.cateid.value)
         })
     })
         .then(res => res.json())
