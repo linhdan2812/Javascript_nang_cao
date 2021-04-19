@@ -6,19 +6,15 @@
     },
     {
       "id": 2,
-      "name": "Đam mỹ"
-    },
-    {
-      "id": 3,
-      "name": "Bách Hợp"
-    },
-    {
-      "id": 4,
       "name": "trinh thám"
     },
     {
-      "id": 5,
-      "name": "nữ cường"
+      "id": 3,
+      "name": "cổ đại"
+    },
+    {
+      "id": 4,
+      "name": "hiện đại"
     }
   ],
   "products": [
@@ -28,7 +24,7 @@
       "image": "https://truyen5s.net/images/2018/11/choc-tuc-vo-yeu-mua-mot-tang-mot.jpeg?v=1611707761",
       "price": "34000",
       "detail": "Ninh Tịch, Lục ĐÌnh Kiêu, Lục Kình Vũ, Lục Cảnh Lễ, Giang Mục Dã....",
-      "cateId": 2
+      "cateId": 1
     },
     {
       "id": 2,
@@ -44,7 +40,7 @@
       "image": "https://307a0e78.vws.vegacdn.vn/view/v2/image/img.book/0/0/0/16326.jpg?v=2&w=340&h=497",
       "price": "10000",
       "detail": "Việc của Thời Sênh - một bà mẹ kế chuyên đứng về phía nhân vật phụ và bức tử nhân vật chính - chính là tiến vào những thế giới tiểu thuyết khác nhau, hoàn thành nguyện vọng cũng như giải trừ oan khuất cho các nhân vật phụ.  Cô xuyên qua vô số thời không, thay đổi số mệnh của vô số người, chứng minh một điều rằng chính nghĩa luôn thắng âm mưu quỷ kế.",
-      "cateId": 5
+      "cateId": 4
     },
     {
       "id": 4,
@@ -65,52 +61,12 @@
   ],
   "customer": [
     {
-      "id": "cts02",
+      "id": 1,
       "cusName": "Đậu Đậu",
       "address": "Nghệ An",
       "phone": "0563319192",
-      "date": "2021-04-02",
-      "status": "ế"
-    },
-    {
-      "id": "cts03",
-      "cusName": "Đậu Đậu",
-      "address": "Nghệ An",
-      "phone": "0563319192",
-      "date": "2021-04-01",
-      "status": "ế"
-    },
-    {
-      "id": "cts04",
-      "cusName": "Đậu Đậu",
-      "address": "Nghệ An",
-      "phone": "0563319192",
-      "date": "2021-04-29",
-      "status": "ế"
-    },
-    {
-      "id": "cts 05",
-      "cusName": "Đậu Đậu",
-      "address": "Nghệ An",
-      "phone": "0563319192",
-      "date": "2021-04-10",
-      "status": "ế sml"
-    },
-    {
-      "id": "cts06",
-      "cusName": "Đậu Đậu",
-      "address": "Nghệ An",
-      "phone": "0563319192",
-      "date": "2021-04-10",
-      "status": "ế"
-    },
-    {
-      "id": "cts07",
-      "cusName": "Đậu Đậu",
-      "address": "Nghệ An",
-      "phone": "0563319192",
-      "status": "ế",
-      "date": "2021-04-10"
+      "date": "2021-04-28",
+      "status": "vẫn ế"
     }
   ]
 }

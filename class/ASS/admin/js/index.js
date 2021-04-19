@@ -1,6 +1,7 @@
 var urlCate = ' http://localhost:3000/cate';
 var urlProducts = 'http://localhost:3000/products';
 var urlCust = 'http://localhost:3000/customer';
+var urlCount = 'http://localhost:3000/cate?_embed=products'
 var countCate = document.querySelector(".countcate");
 var countProd = document.querySelector(".countProd");
 var countCust = document.querySelector(".countCust");
@@ -29,14 +30,23 @@ fetch(urlCust, {
         countCust.innerHTML = custData.length;
     })
 
-fetch(urlProducts, {
+fetch(urlCount, {
     method: "GET"
 })
     .then(res => res.json())
-    .then(cate_pro => {
-        var content =``;
-        var counts = 0;
-        cate_pro.forEach(count_cate_pro=>{
-            content += `<li>${count_cate_pro.cateId}</li>`;
-        })
+    .then(count => {
+        count.forEach(countPro => {
+            renderCount(countPro)
+        });
     })
+var countPro = document.querySelector(".countPro");
+var renderCount = count => {
+    result = `
+    <tr>
+        <td>${count.id}</td>
+        <td>${count.name}</td>
+        <td>${count.products.length}</td>
+    </tr>
+    `;
+    countPro.insertAdjacentHTML('beforeend', result)
+}
