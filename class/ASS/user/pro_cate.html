@@ -1,3 +1,7 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
 <!doctype html>
 <html lang="zxx">
 
@@ -6,11 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Đậu Đậu Home</title>
+    <title>Photoflash - Photo Gallery Category Bootstrap Responsive Website Template - Home :: W3layouts </title>
     <link href="//fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/detail.css">
+
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
 </head>
@@ -23,6 +26,10 @@
                 <h1> <a class="navbar-brand" href="index.html">
                         Đậu<span class="sub-spl">Đậu</span>
                     </a></h1>
+                <!-- if logo is image enable this   
+        <a class="navbar-brand" href="#index.html">
+            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+        </a> -->
                 <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                     data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -50,13 +57,12 @@
                     <ul class="navbar-nav search-right mt-lg-0 mt-2">
                         <li class="nav-item mr-3" title="Search"><a href="#search" class="btn search-search">
                                 <span class="fa fa-search" aria-hidden="true"></span></a></li>
-                        <li class="nav-item"><a href="../admin/html/index.html"
-                                class="btn btn-primary d-none d-lg-block btn-style">Admin</a>
+                        <li class="nav-item"><a href="#download"
+                                class="btn btn-primary d-none d-lg-block btn-style">Download</a>
                         </li>
                     </ul>
 
                     <!-- //toggle switch for light and dark theme -->
-
                     <!-- search popup -->
                     <div id="search" class="pop-overlay">
                         <div class="popup">
@@ -83,23 +89,18 @@
                         </div>
                     </nav>
                 </div>
-
-                <div class="mobile-position">
-                    <nav class="navigation">
-                        <a href="">
-                            <i class="fa fa-shopping-cart fa-2x"></i>
-                        </a>
-                    </nav>
-                </div>
-
+                <!-- //toggle switch for light and dark theme -->
             </nav>
         </div>
     </header>
+    <!-- //header -->
+    <!-- banner -->
     <section class="bannerhny w3pvt-banner" id="home">
         <div class="container">
             <div class="banner-info text-center mx-auto">
                 <div class="w3pvt-logo align-self">
-                    <h3>Read your live</h3>
+                    <span class="fa fa-camera" aria-hidden="true"></span>
+                    <h3>Capturing the moments that captivate your heart.</h3>
                     <form action="#" method="post" class="">
                         <input type="search" name="search" placeholder="Search here..." required="">
                         <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
@@ -109,40 +110,26 @@
             </div>
         </div>
     </section>
+    <!-- //banner -->
+    <!--/gallery -->
     <section class="w3-gallery py-5">
-        <!-- danh sách danh mục -->
-        <ul class="portfolio-categ filter mb-md-5 mb-4 p-0 justify-content-center" id="cateList">
-        </ul>
-        <!-- danh sách truyện -->
         <div class="container py-md-5">
-            <div class="card">
-                <div class="container-fliud">
-                    <div class="wrapper row">
-                        <div class="preview col-md-6">
-
-                            <div class="preview-pic tab-content">
-                                <div class="tab-pane active"><img id="img" src="" width="10%"/></div>
-                            </div>
-                        </div>
-                        <div class="details col-md-6">
-                            <h3 class="product-title" id="title"></h3>
-                            <p class="product-description">
-                            </p>
-                            <h4 class="price">current price: <span id="price"></span></h4>
-
-                            <div class="action">
-                                <button class="add-to-cart btn btn-default" type="button"><i
-                                        class="fa fa-plus-square mr-1"></i>add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ul class="portfolio-categ filter mb-md-5 mb-4 p-0 justify-content-center" id="cateList">
+            </ul>
+            <ul class="portfolio-area clearfix p-0 m-0" id="productList">
+                
+            </ul>
+            <!--end portfolio-area -->
         </div>
-        <script src="assets/js/js/index.js"></script>
-        <script src="assets/js/js/detail.js"></script>
+        <!-- //gallery container -->
     </section>
+    <script src="assets/js/js/index.js"></script>
+    <!-- //gallery-->
 
+    <!-- testimonials -->
+    <!-- //testimonials -->
+    <!-- middle slider -->
+       <!-- footer-28 block -->
     <footer class="footer-28 py-5">
         <div class="container py-lg-3">
             <div class="w3l-forms-9 px-4" id="newsletter">
@@ -228,6 +215,11 @@
                     </div>
                 </div>
             </div>
+            <div class="midd-footer-28 align-center py-4 mt-5">
+                <p class="copy-footer-28 text-center"> &copy; 2020 Photoflash. All Rights Reserved. Design by <a
+                        href="https://w3layouts.com/" target="_blank">
+                        W3layouts</a></p>
+            </div>
         </div>
 
 
@@ -262,7 +254,7 @@
 
     <script src="assets/js/theme-change.js"></script><!-- theme switch js (light and dark)-->
 
-    <script src="assets/js/jquery-3.3.1.min.js"></script><!-- default jQuery -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/owl.carousel.js"></script>
     <!-- script for tesimonials carousel slider -->
     <script>
