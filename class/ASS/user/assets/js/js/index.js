@@ -1,5 +1,4 @@
 var urlProducts = 'http://localhost:3000/products';
-var urlProduct = 'http://localhost:3000/products';
 var urlCate = 'http://localhost:3000/cate';
 
 // hiển thị sản phẩm
@@ -45,9 +44,7 @@ fetch(urlCate).then(res => res.json())
 var catetList = document.querySelector('#cateList');
 var renderCate = cate => {
     output = `
-    <li class="cat-item-1">
-        <a href="pro_cate.html?id=${cate.id}" title="Category 1">${cate.name}</a>
-    </li>
+    <li data-id=${cate.id} class="btnCategories">${cate.name}</li>
     `;
     catetList.insertAdjacentHTML('beforeend', output);
 }

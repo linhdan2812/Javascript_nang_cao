@@ -1,0 +1,257 @@
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Glance Design Dashboard an Admin Panel Category Flat Bootstrap Responsive Website Template | Home ::
+		w3layouts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+
+	<!-- font-awesome icons CSS -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons CSS-->
+
+	<!-- side nav css file -->
+	<link href='css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css' />
+
+
+	<!--webfonts-->
+	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext"
+		rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+	<!--//Metis Menu -->
+	<style>
+		#chartdiv {
+			width: 100%;
+			height: 295px;
+		}
+	</style>
+
+</head>
+
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+		<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+			<!--left-fixed -navigation-->
+			<aside class="sidebar-left">
+				<nav class="navbar navbar-inverse">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+							data-target=".collapse" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="d-flex justify-content-center">
+							<img src="images/logo.png" alt="" width="50%">
+						</div>
+
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="sidebar-menu">
+							<li class="header">MAIN NAVIGATION</li>
+							<li class="treeview">
+								<a href="index.html">
+									<i class="fa fa-dashboard"></i> <span>Dashboard</span>
+								</a>
+							</li>
+							<li class="treeview">
+								<a href="#">
+									<i class="fa fa-laptop"></i>
+									<span>Hotel</span>
+									<i class="fa fa-angle-left pull-right"></i>
+								</a>
+								<ul class="treeview-menu">
+									<li><a href="grids.html"><i class="fa fa-angle-right"></i> Hà Nội</a></li>
+									<li><a href="media.html"><i class="fa fa-angle-right"></i> Đà Nẵng</a></li>
+									<li><a href="media.html"><i class="fa fa-angle-right"></i> Hồ Chí Minh</a></li>
+								</ul>
+							</li>
+							<li class="treeview">
+								<a href="charts.html">
+									<i class="fa fa-pie-chart"></i>
+									<span>Booking</span>
+									<!-- <span class="label label-primary pull-right">new</span> -->
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</aside>
+		</div>
+		<div class="sticky-header header-section ">
+			<div class="header-right">
+				<div class="profile_details">
+					<ul>
+						<li class="dropdown profile_details_drop">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<div class="profile_img">
+									<span class="prfil-img"><img src="images/2.jpg" alt=""> </span>
+									<div class="user-name">
+										<p>Admin Name</p>
+										<span>Administrator</span>
+									</div>
+									<i class="fa fa-angle-down lnr"></i>
+									<i class="fa fa-angle-up lnr"></i>
+									<div class="clearfix"></div>
+								</div>
+							</a>
+							<ul class="dropdown-menu drp-mnu">
+								<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
+								<li> <a href="#"><i class="fa fa-user"></i> My Account</a> </li>
+								<li> <a href="#"><i class="fa fa-suitcase"></i> Profile</a> </li>
+								<li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //header-ends -->
+		<!-- main content start-->
+		<div id="page-wrapper">
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table">
+						<thead>
+							<tr>
+								<!-- <th>ID</th> -->
+								<th>Hotel Address</th>
+								<!-- <th>Room</th> -->
+								<th>Date</th>
+								<th>Days</th>
+								<th>Adutls</th>
+								<th>Children</th>
+								<th>Full Name</th>
+								<th>Email</th>
+								<th>Phone</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+						<tbody id="list">
+							<!-- <tr class="active">
+								<td id="id"></td>
+								<td id="addressHotel"></td>
+								<td id="room"></td> 
+								<td id="date"></td>
+								<td id="days"></td>
+								<td id="adults"></td>
+								<td id="chilren"></td>
+								<td id="fullname"></td>
+								<td id="email"></td>
+								<td id="phone"></td>
+								<td id="price"></td>
+							</tr> -->
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--//footer-->
+	</div>
+	<script src="js/booking.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyBXn7UEHhJcTXIF0PGO5Fdo9eMhT5_l1jg",
+			authDomain: "booktogo-bc435.firebaseapp.com",
+			databaseURL: "https://booktogo-bc435-default-rtdb.firebaseio.com",
+			projectId: "booktogo-bc435",
+			storageBucket: "booktogo-bc435.appspot.com",
+			messagingSenderId: "1089963565426",
+			appId: "1:1089963565426:web:511ab12b8720edaffc3deb",
+			measurementId: "G-5RR0JBKJQS"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+
+		function FetchAllData() {
+			firebase.database().ref('Booking').once('value',
+			function(number){
+				number.for( function(phone){
+					console.log("phone",phone[1])
+				})
+			})
+			// firebase.database().ref('Booking/+84975414741').once('value',
+			// 	function (record) {
+			// 		record.forEach(
+			// 			function (currentRecord) {
+			// 				var addressHotel = currentRecord.val().addressHotel;
+			// 				var date_time = currentRecord.val().date_time;
+			// 				var days = currentRecord.val().days;
+			// 				var adults = currentRecord.val().adults;
+			// 				var children = currentRecord.val().children;
+			// 				var fullname = currentRecord.val().fullname;
+			// 				var email = currentRecord.val().email;
+			// 				var phone = currentRecord.val().phone;
+			// 				var price = currentRecord.val().price;
+			// 				AddToTable(addressHotel, date_time, days, adults, children, fullname, email, phone, price);
+			// 			}
+			// 		);
+			// 	}
+			// )
+		}
+		FetchAllData()
+		// window.onload = FetchAllData;
+		// function AddToTable(addressHotel, date_time, days, adults, children, fullname, email, phone, price) {
+		// 	var tbody = document.querySelector('#list');
+		// 	var tr = document.createElement('tr');
+		// 	var tdAdd = document.createElement('td');
+		// 	var tdDate = document.createElement('td');
+		// 	var tdDays = document.createElement('td');
+		// 	var tdAdults = document.createElement('td');
+		// 	var tdChild = document.createElement('td');
+		// 	var tdFullname = document.createElement('td');
+		// 	var tdEmail = document.createElement('td');
+		// 	var tdPhone = document.createElement('td');
+		// 	var tdPrice = document.createElement('td');
+
+		// 	tdAdd.innerHTML = addressHotel;
+		// 	tdDate.innerHTML = date_time;
+		// 	tdDays.innerHTML = days;
+		// 	tdAdults.innerHTML = adults;
+		// 	tdChild.innerHTML = children;
+		// 	tdFullname.innerHTML = fullname;
+		// 	tdEmail.innerHTML = email;
+		// 	tdPhone.innerHTML = phone;
+		// 	tdPrice.innerHTML = price;
+
+		// 	tr.appendChild(tdAdd);
+		// 	tr.appendChild(tdDate);
+		// 	tr.appendChild(tdDays);
+		// 	tr.appendChild(tdAdults);
+		// 	tr.appendChild(tdChild);
+		// 	tr.appendChild(tdFullname);
+		// 	tr.appendChild(tdEmail);
+		// 	tr.appendChild(tdPhone);
+		// 	tr.appendChild(tdPrice);
+		// 	tbody.appendChild(tr);
+		// }
+		
+	</script>
+</body>
+
+</html>

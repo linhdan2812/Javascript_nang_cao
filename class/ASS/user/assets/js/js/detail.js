@@ -1,7 +1,5 @@
 window.onload = () => {
-    var $ = document.querySelector.bind(document);
-    var $$ = document.querySelectorAll.bind(document);
-    var categoryAPI = 'http://localhost:3000/category';
+    // var $ = document.querySelector.bind(document);
     var productAPI = 'http://localhost:3000/products';
     var url = new URL(document.URL);
     var id = url.searchParams.get('id');
@@ -17,20 +15,17 @@ window.onload = () => {
             })
             .then(data => {
 
-                $('#title').innerHTML = data.proName;
-                $('#price').innerHTML = data.price;
-                $('.product-description').innerHTML = data.detail;
-                $('#img').src = data.image;
+                document.querySelector('#title').innerHTML = data.proName;
+                document.querySelector('#price').innerHTML = data.price;
+                document.querySelector('.product-description').innerHTML = data.detail;
+                document.querySelector('#img').src = data.image;
 
             });
 
     }
 
-    if (id) {
-    getProduct();
-    } else {
-        // $('#product-detail-content').innerHTML = 'Không tìm thấy sản phẩm';
-    }
+    getProduct(id);
+ 
 
 
 }
