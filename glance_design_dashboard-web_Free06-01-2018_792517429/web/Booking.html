@@ -163,6 +163,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<!--//footer-->
+		<p class="d"></p>
 	</div>
 	<script src="js/booking.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
@@ -174,6 +175,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
 
 	<script>
+		var data = '';
 		var firebaseConfig = {
 			apiKey: "AIzaSyBXn7UEHhJcTXIF0PGO5Fdo9eMhT5_l1jg",
 			authDomain: "booktogo-bc435.firebaseapp.com",
@@ -189,12 +191,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		firebase.analytics();
 
 		function FetchAllData() {
-			firebase.database().ref('Booking').once('value',
-			function(number){
-				number.for( function(phone){
-					console.log("phone",phone[1])
-				})
-			})
+			firebase.database().ref('Booking').once('value', function (snapshot) {
+				console.log(snapshot.val());
+				
+			});
 			// firebase.database().ref('Booking/+84975414741').once('value',
 			// 	function (record) {
 			// 		record.forEach(
@@ -214,8 +214,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			// 	}
 			// )
 		}
-		FetchAllData()
-		// window.onload = FetchAllData;
+
+		window.onload = FetchAllData;
 		// function AddToTable(addressHotel, date_time, days, adults, children, fullname, email, phone, price) {
 		// 	var tbody = document.querySelector('#list');
 		// 	var tr = document.createElement('tr');
@@ -250,7 +250,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		// 	tr.appendChild(tdPrice);
 		// 	tbody.appendChild(tr);
 		// }
-		
+
 	</script>
 </body>
 
