@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "https://reqres.in/api/products?page=1&per_page=5",
+                method: "get",
+                responseType: "json",
+                success: function(data) {
+                    console.log(data);
+                    data.map(element => {
+                        output = `
+                    <tr>
+                        <th>${element.id}</th>
+                        <th>${element.categorie_name}</th>
+                        
+                    </tr>
+                    `;
+                        $(output).insertAfter("tbody");
+
+                    });
+                }
+
+            });
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

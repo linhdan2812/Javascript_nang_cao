@@ -61,12 +61,13 @@
                     <div id="search" class="pop-overlay">
                         <div class="popup">
                             <form action="#" method="GET" class="d-sm-flex">
-                                <input type="search" placeholder="Search.." name="search" required="required" autofocus>
+                                <input  type="search" placeholder="Search.." name="search" required="required" autofocus>
                                 <button type="submit">Search</button>
                                 <a class="close" href="#url">&times;</a>
                             </form>
                         </div>
                     </div>
+                    <script src="assets/js/js/find.js"></script>
                     <!-- /search popup -->
                 </div>
                 <!-- toggle switch for light and dark theme -->
@@ -86,7 +87,7 @@
 
                 <div class="mobile-position">
                     <nav class="navigation">
-                        <a href="">
+                        <a href="card.html">
                             <i class="fa fa-shopping-cart fa-2x"></i>
                         </a>
                     </nav>
@@ -121,7 +122,7 @@
                         <div class="preview col-md-6">
 
                             <div class="preview-pic tab-content">
-                                <div class="tab-pane active"><img id="img" src="" width="10%"/></div>
+                                <div class="tab-pane active"><img id="image" src="" width="10%"/></div>
                             </div>
                         </div>
                         <div class="details col-md-6">
@@ -131,7 +132,7 @@
                             <h4 class="price">current price: <span id="price"></span></h4>
 
                             <div class="action">
-                                <button class="add-to-cart btn btn-default" type="button"><i
+                                <button id="btn-add-to-cart" class="add-to-cart btn btn-default" type="button"><i
                                         class="fa fa-plus-square mr-1"></i>add to cart</button>
                             </div>
                         </div>

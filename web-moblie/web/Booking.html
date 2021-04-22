@@ -63,8 +63,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<ul class="sidebar-menu">
 							<li class="header">MAIN NAVIGATION</li>
 							<li class="treeview">
-								<a href="index.html">
-									<i class="fa fa-dashboard"></i> <span>Dashboard</span>
+								<a href="discount.html">
+									<i class="fa fa-dashboard"></i> <span>Discount</span>
 								</a>
 							</li>
 							<li class="treeview">
@@ -79,8 +79,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<li><a href="media.html"><i class="fa fa-angle-right"></i> Hồ Chí Minh</a></li>
 								</ul>
 							</li>
-							<li class="treeview">
-								<a href="charts.html">
+							<li class="treeview current">
+								<a href="Booking.html">
 									<i class="fa fa-pie-chart"></i>
 									<span>Booking</span>
 									<!-- <span class="label label-primary pull-right">new</span> -->
@@ -143,19 +143,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							</tr>
 						</thead>
 						<tbody id="list">
-							<!-- <tr class="active">
-								<td id="id"></td>
-								<td id="addressHotel"></td>
-								<td id="room"></td> 
-								<td id="date"></td>
-								<td id="days"></td>
-								<td id="adults"></td>
-								<td id="chilren"></td>
-								<td id="fullname"></td>
-								<td id="email"></td>
-								<td id="phone"></td>
-								<td id="price"></td>
-							</tr> -->
+				
 
 						</tbody>
 					</table>
@@ -168,14 +156,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<script src="js/booking.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
-
-
-	<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 	<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
 
 	<script>
-		var data = '';
+		var mang = ['a', 'b', 'c']
+		var arrs = [];
+		var newarr = []
 		var firebaseConfig = {
 			apiKey: "AIzaSyBXn7UEHhJcTXIF0PGO5Fdo9eMhT5_l1jg",
 			authDomain: "booktogo-bc435.firebaseapp.com",
@@ -189,67 +175,83 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
 		firebase.analytics();
-
 		function FetchAllData() {
-			firebase.database().ref('Booking').once('value', function (snapshot) {
-				console.log(snapshot.val());
-				
-			});
-			// firebase.database().ref('Booking/+84975414741').once('value',
-			// 	function (record) {
-			// 		record.forEach(
-			// 			function (currentRecord) {
-			// 				var addressHotel = currentRecord.val().addressHotel;
-			// 				var date_time = currentRecord.val().date_time;
-			// 				var days = currentRecord.val().days;
-			// 				var adults = currentRecord.val().adults;
-			// 				var children = currentRecord.val().children;
-			// 				var fullname = currentRecord.val().fullname;
-			// 				var email = currentRecord.val().email;
-			// 				var phone = currentRecord.val().phone;
-			// 				var price = currentRecord.val().price;
-			// 				AddToTable(addressHotel, date_time, days, adults, children, fullname, email, phone, price);
-			// 			}
-			// 		);
-			// 	}
-			// )
+			firebase.database().ref('Users').once('value',
+				function (record) {
+					record.forEach(
+						function (currentRecord) {
+							var phone = currentRecord.val().phone;
+							arrs.push(phone);
+							newarr = arrs;
+							inner();
+						}
+					);
+
+				}
+			);
+			function inner() {
+				console.log("length", newarr)
+				console.log('abc', mang)
+				for (var i = 0; i < arrs.length; i++) {
+					console.log("MANGE1", arrs[1]);
+					firebase.database().ref('Booking/' + arrs[i]).once('value',
+						function (record) {
+							record.forEach(
+								function (currentRecord) {
+									var addressHotel = currentRecord.val().addressHotel;
+									var date_time = currentRecord.val().date_time;
+									var days = currentRecord.val().days;
+									var adults = currentRecord.val().adults;
+									var children = currentRecord.val().children;
+									var fullname = currentRecord.val().fullname;
+									var email = currentRecord.val().email;
+									var phone = currentRecord.val().phone;
+									var price = currentRecord.val().price;
+									AddToTable(addressHotel, date_time, days, adults, children, fullname, email, phone, price);
+								}
+							);
+						}
+					)
+				}
+			}
 		}
 
 		window.onload = FetchAllData;
-		// function AddToTable(addressHotel, date_time, days, adults, children, fullname, email, phone, price) {
-		// 	var tbody = document.querySelector('#list');
-		// 	var tr = document.createElement('tr');
-		// 	var tdAdd = document.createElement('td');
-		// 	var tdDate = document.createElement('td');
-		// 	var tdDays = document.createElement('td');
-		// 	var tdAdults = document.createElement('td');
-		// 	var tdChild = document.createElement('td');
-		// 	var tdFullname = document.createElement('td');
-		// 	var tdEmail = document.createElement('td');
-		// 	var tdPhone = document.createElement('td');
-		// 	var tdPrice = document.createElement('td');
+		// window.onload = getphone;
+		function AddToTable(addressHotel, date_time, days, adults, children, fullname, email, phone, price) {
+			var tbody = document.querySelector('#list');
+			var tr = document.createElement('tr');
+			var tdAdd = document.createElement('td');
+			var tdDate = document.createElement('td');
+			var tdDays = document.createElement('td');
+			var tdAdults = document.createElement('td');
+			var tdChild = document.createElement('td');
+			var tdFullname = document.createElement('td');
+			var tdEmail = document.createElement('td');
+			var tdPhone = document.createElement('td');
+			var tdPrice = document.createElement('td');
 
-		// 	tdAdd.innerHTML = addressHotel;
-		// 	tdDate.innerHTML = date_time;
-		// 	tdDays.innerHTML = days;
-		// 	tdAdults.innerHTML = adults;
-		// 	tdChild.innerHTML = children;
-		// 	tdFullname.innerHTML = fullname;
-		// 	tdEmail.innerHTML = email;
-		// 	tdPhone.innerHTML = phone;
-		// 	tdPrice.innerHTML = price;
+			tdAdd.innerHTML = addressHotel;
+			tdDate.innerHTML = date_time;
+			tdDays.innerHTML = days;
+			tdAdults.innerHTML = adults;
+			tdChild.innerHTML = children;
+			tdFullname.innerHTML = fullname;
+			tdEmail.innerHTML = email;
+			tdPhone.innerHTML = phone;
+			tdPrice.innerHTML = price;
 
-		// 	tr.appendChild(tdAdd);
-		// 	tr.appendChild(tdDate);
-		// 	tr.appendChild(tdDays);
-		// 	tr.appendChild(tdAdults);
-		// 	tr.appendChild(tdChild);
-		// 	tr.appendChild(tdFullname);
-		// 	tr.appendChild(tdEmail);
-		// 	tr.appendChild(tdPhone);
-		// 	tr.appendChild(tdPrice);
-		// 	tbody.appendChild(tr);
-		// }
+			tr.appendChild(tdAdd);
+			tr.appendChild(tdDate);
+			tr.appendChild(tdDays);
+			tr.appendChild(tdAdults);
+			tr.appendChild(tdChild);
+			tr.appendChild(tdFullname);
+			tr.appendChild(tdEmail);
+			tr.appendChild(tdPhone);
+			tr.appendChild(tdPrice);
+			tbody.appendChild(tr);
+		}
 
 	</script>
 </body>

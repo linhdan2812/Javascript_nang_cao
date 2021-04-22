@@ -1,5 +1,5 @@
 window.onload = () => {
-    // var $ = document.querySelector.bind(document);
+    var $ = document.querySelector.bind(document);
     var productAPI = 'http://localhost:3000/products';
     var url = new URL(document.URL);
     var id = url.searchParams.get('id');
@@ -15,38 +15,45 @@ window.onload = () => {
             })
             .then(data => {
 
-                document.querySelector('#title').innerHTML = data.proName;
-                document.querySelector('#price').innerHTML = data.price;
-                document.querySelector('.product-description').innerHTML = data.detail;
-                document.querySelector('#img').src = data.image;
+                $('#title').innerHTML = data.proName;
+                $('#price').innerHTML = data.price;
+                $('.product-description').innerHTML = data.detail;
+                $('#image').src = data.image;
 
             });
 
     }
-
     getProduct(id);
- 
-
 
 }
 
-// document.querySelector("#search-input").addEventListener('keyup', function(e) {
-//     var result = document.querySelector("#result-search")
-//     console.log(e.target.value);
-//     var url_Search = `http://localhost:3000/products?q=${e.target.value}&qFields=name`
-
-//     fetch(url_Search)
-//         .then((res) => res.json())
-//         .then((data) => result.innerHTML = data.map(product => {
-//             return ` 
-//             <a href="detail.html?id=${product.id}" >
-//             <img src="${product.image}" alt=""  style="width:140px;">
-//                 <span class="info">
-//                 <h6 class="name">${product.name}</h6>
-//                 <span class="price" style="font-size:13px">${product.price}  đ</span></span>
-//                 </a>
-           
-//             <hr>
-//             `
-//         }).join(""));
-// })
+var productAPI = 'http://localhost:3000/products';
+var url = new URL(document.URL);
+var id = url.searchParams.get('id');
+document.querySelector("#btn-add-to-cart").addEventListener("click",()=>{
+    fetch(`${productAPI}/${id}`)
+            .then((response) => {
+                return response.json();
+            })
+            .then(data => {
+                if (localStorage.getItem("products")) {
+                    products = JSON.parse(localStorage.getItem("products"));
+                  }
+                  if (localStorage.getItem("products") == null) {
+                    var products = [];
+                    localStorage.setItem("products", products);
+                  }
+                  products = JSON.parse(localStorage.getItem("products"));
+                    products.push({
+                      id: data.id,
+                      title: data.proName,
+                      image: data.image,
+                      price: data.price
+                    });
+                    console.log(typeof price);
+                    localStorage.setItem("products", JSON.stringify(products));
+            
+                    alert("Thêm vào giỏ hàng thành công");
+                  
+            });
+})

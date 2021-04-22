@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <span>Line 0 Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit</span>
+    <br>
+    <span>Line 0 Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit</span>
+    <br>
+    <p id="line1">Line 2 Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit</p>
+    <p class="line2">Line 3 Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit</p>
+    <p line-count="line3">Line 4 Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit</p>
+    <p selectedLine>Line 5 Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit</p>
+    <br>
+    <ul>
+        <li>li 1</li>
+        <li>li 2</li>
+        <li>li 3</li>
+        <li>li 4</li>
+        <li>li 5</li>
+    </ul>
+    <script>
+        $('#line1').next().css('color', 'green');
+        $('p[selectedLine]').prev().css('background-color', 'brown');
+        $('li:first').parent().css('background-color', 'pink');
+        $('ul').children().css('color', 'green')
+    </script>
+</body>
+
+</html>
